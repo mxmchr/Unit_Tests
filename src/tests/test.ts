@@ -130,11 +130,11 @@ describe("basic Test Suite", () => {
 import * as BookPriceCollectionService from "../../BookPriceCollectionService";
 
 jest.mock("../../BookPriceCollectionService", () => ({
-  getAveragePrice: jest.fn((title: string, country: string) => 30), // Mock implementation, adjust as needed
+  getAveragePrice: jest.fn((title: string, country: string) => 30),
 }));
 
 describe("BookPriceCollectionService Test Suite", () => {
-  it("Test getAveragePrice with mock implementation", () => {
+  it("Test if getAveragePrice with mock implementation", () => {
     // Act
     const price = BookPriceCollectionService.getAveragePrice("Sample Title", "FR");
 
