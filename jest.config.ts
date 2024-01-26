@@ -8,4 +8,4 @@ const config: Config.InitialOptions = {
   /**collectCoverageFrom**/ 
 }
 
-export default config
+export default config;
