@@ -1,6 +1,7 @@
 export type Book = {
     author: string;
     title: string;
+    available: boolean;
   };
   
   export class BookCollection {
@@ -27,6 +28,22 @@ export type Book = {
   
     getAllBooks(): Book[] {
       return this.Books;
+    }
+
+    borrow(title: string): void {
+      const book = this.findBookByTitle(title);
+  
+      if (book) {
+        book.available = false;
+      }
+    }
+
+    return(title: string): void {
+      const book = this.findBookByTitle(title);
+  
+      if (book) {
+        book.available = true;
+      }
     }
 
     
